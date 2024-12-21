@@ -1,0 +1,89 @@
+:root {
+  --card-color: #f5fbff;
+  --lightblue: #44c4ff;
+  --darkblue: #339dff;
+  --text-color: #545c77;
+}
+
+
+#timerCard {
+  display: flex;
+  background-color: var(--card-color);
+  min-height: 300px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px 40px;
+  position: relative;
+  text-align: center;
+  border-radius: 11px;
+  gap: 40px;
+}
+
+#btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  //border: 1px solid black;
+}
+
+button {
+  background: radial-gradient(circle, var(--lightblue), var(--darkblue) 98%);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-weight: 800;
+  font-size: 1.01em;
+  transition: all 800ms ease-out;
+}
+
+button:hover {
+  background: radial-gradient(circle, var(--darkblue), var(--lightblue) 98%);
+}
+
+#clock-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  //border: 1px solid black;
+}
+
+#clock-bar {
+  //border: 1px solid green;
+  justify-content: center;
+  padding: 30px;
+}
+
+#clock-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: conic-gradient(#3498db var(--progress, 0%), #dce6f2 0%);
+  mask: radial-gradient(transparent 65%, black 66%);
+  -webkit-mask: radial-gradient(transparent 65%, black 66%);
+}
+
+#clock {
+  color: var(--text-color);
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+}
+
+.time-input {
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: 800;
+  padding: 2px;
+  width: 60px;
+}
+
+.time-unit {
+  cursor: pointer;
+}
